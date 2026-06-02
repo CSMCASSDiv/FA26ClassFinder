@@ -33,6 +33,9 @@ results = df[
     & (df["Section Meet End Time"] >= time_input)
 ]
 
+# Extract building number (everything before '-')
+df["Building"] = df["Section Building Code"].astype(str).str.split("-").str[0]
+
 # Display results
 st.subheader("Classes Happening Now")
 
@@ -43,6 +46,7 @@ else:
         st.markdown(f"""
         **{row['Course']} – {row['Title']}**  
         Instructor: {row['Instructor']}  
+        Building: {row['Section Building Code']}
         Email: {row['Instructor Email']}  
         Room: {row['Room']}  
         Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
