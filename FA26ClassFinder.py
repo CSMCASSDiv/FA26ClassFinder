@@ -46,8 +46,8 @@ else:
         st.markdown(f"""
         **{row['Course']} – {row['Title']}**  
         Instructor: {row['Instructor']}  
-        Building: {row['Section Building Code']}
         Email: {row['Instructor Email']}  
+        Building: {row['Section Building Code']}
         Room: {row['Room']}  
         Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         """)
