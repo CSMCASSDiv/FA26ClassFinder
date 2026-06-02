@@ -52,7 +52,7 @@ else:
         **{row['Course']} – {row['Title']}**  
         Instructor: {row['Instructor']}  
         Email: {row['Instructor Email']}  
-        Building: {row['Building']}
-        Room: {row['Room']}
+        Building: {row['Building']}  
+        Room: {row['Room']}  
         Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         """)
