@@ -44,9 +44,9 @@ group_map = {
 
 # Color Map
 color_map = {
-    "Social Science": "#1f77b4",  
-    "Creative Arts": "#ff7f0e",    
-    "Health and Wellness": "ffffff", 
+    "Social Science": "#1d4e89",  
+    "Creative Arts": "#7D6AC8",    
+    "Health and Wellness": "f79256", 
     "Other": "#7f7f7f"             
 }
 
