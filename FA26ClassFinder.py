@@ -101,7 +101,7 @@ if group_input != "All":
     results = results[results["Group"] == group_input]
 
 # Sort results by time
-# results = results.sort_values(by="Section Meet Begin Time")
+results = results.sort_values(by="Section Meet Begin Time")
 
 # Display results
 st.subheader("Classes Happening Now")
