@@ -19,7 +19,7 @@ def expand_days(schedule):
 df["Days_List"] = df["Section Meet Schedule"].apply(expand_days)
 
 # UI
-st.title("Class Schedule Finder")
+st.title("FA26 CASS Class Finder")
 
 day_input = st.selectbox("Select Day", list(day_map.keys()))
 time_input = st.number_input("Enter Time (HHMM)", value=900)
