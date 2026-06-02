@@ -41,10 +41,6 @@ results = df[
     & (df["Section Meet End Time"] >= time_input)
 ]
 
-# Combine Building adn Room
-f"Location: Bldg {row['Building']}, Room {row['Room']}"
-``
-
 # Display results
 st.subheader("Classes Happening Now")
 
@@ -56,6 +52,7 @@ else:
         **{row['Course']} – {row['Title']}**  
         Instructor: {row['Instructor']}  
         Email: {row['Instructor Email']}  
-        Location: {row['Location']}
+        Building: {row['Building']}
+        Room: {row['Room']}
         Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         """)
