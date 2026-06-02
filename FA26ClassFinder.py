@@ -21,7 +21,6 @@ df["Days_List"] = df["Section Meet Schedule"].apply(expand_days)
 # Group Map
 group_map = {
     # Social Science
-    "ADS": "Social Science",
     "ANTH": "Social Science",
     "ECON": "Social Science",
     "ETHN": "Social Science",
@@ -46,7 +45,7 @@ group_map = {
 color_map = {
     "Social Science": "#1d4e89",  
     "Creative Arts": "#7D6AC8",    
-    "Health and Wellness": "f79256", 
+    "Health and Wellness": "#f79256", 
     "Other": "#7f7f7f"             
 }
 
@@ -90,6 +89,9 @@ group_input = st.selectbox(
     "Filter by ACC",
     ["All", "Social Science", "Creative Arts", "Health and Wellness", "Other"]
 )
+
+if group_input != "All":
+    results = results[results["Group"] == group_input]
 
 # Sort results by time
 # results = results.sort_values(by="Section Meet Begin Time")
@@ -139,7 +141,7 @@ else:
             </h4>
             <b>Category:</b> {group}<br>
             <b>Instructor:</b> {row['Instructor']}<br>
-            <b>Email:</b> {row['Instructor Email']}<br>
+            <b>Email:</b> <a href="mailto:{row['Instructor Email']">{row['Instructor Email']}</a><br>
             <b>Location:</b> Bldg {row['Building']}, Room {row['Room']}<br>
             <b>Time:</b> {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         </div>
