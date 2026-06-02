@@ -90,18 +90,18 @@ group_input = st.selectbox(
     ["All", "Social Science", "Creative Arts", "Health and Wellness", "Other"]
 )
 
-if group_input != "All":
-    results = results[results["Group"] == group_input]
-
-# Sort results by time
-# results = results.sort_values(by="Section Meet Begin Time")
-
 # Filtering
 results = df[
     df["Days_List"].apply(lambda days: selected_day_letter in days)
     & (df["Section Meet Begin Time"] <= time_input)
     & (df["Section Meet End Time"] >= time_input)
 ]
+
+if group_input != "All":
+    results = results[results["Group"] == group_input]
+
+# Sort results by time
+# results = results.sort_values(by="Section Meet Begin Time")
 
 # Display results
 st.subheader("Classes Happening Now")
