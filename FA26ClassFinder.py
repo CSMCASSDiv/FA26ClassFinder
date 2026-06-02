@@ -92,7 +92,7 @@ group_input = st.selectbox(
 )
 
 # Sort results by time
-results = results.sort_values(by="Section Meet Begin Time")
+# results = results.sort_values(by="Section Meet Begin Time")
 
 # Filtering
 results = df[
