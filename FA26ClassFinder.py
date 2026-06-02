@@ -19,7 +19,12 @@ def expand_days(schedule):
 df["Days_List"] = df["Section Meet Schedule"].apply(expand_days)
 
 # Extract building number (everything before '-')
-df["Building"] = df["Section Building Code"].astype(str).str.split("-").str[0]
+df["Building"] = (
+    df["Section Building Code"]
+    .astype(str)
+    .str.split("-").str[0]
+    .replace({"0": "Unknown", "UNKN": "Unknown"})
+)
 
 # UI
 st.title("FA26 CASS Class Finder")
@@ -47,7 +52,7 @@ else:
         **{row['Course']} – {row['Title']}**  
         Instructor: {row['Instructor']}  
         Email: {row['Instructor Email']}  
-        Building: {row['Section Building Code']}
+        Building: {row['Building']}
         Room: {row['Room']}  
         Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         """)
