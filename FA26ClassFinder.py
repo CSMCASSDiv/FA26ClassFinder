@@ -141,7 +141,7 @@ else:
             </h4>
             <b>Category:</b> {group}<br>
             <b>Instructor:</b> {row['Instructor']}<br>
-            <b>Email:</b> <a href="mailto:{row['Instructor Email']">{row['Instructor Email']}</a><br>
+            <b>Email:</b> <a href="mailto:{row['Instructor Email']}">{row['Instructor Email']}</a><br>
             <b>Location:</b> Bldg {row['Building']}, Room {row['Room']}<br>
             <b>Time:</b> {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
         </div>
