@@ -31,29 +31,29 @@ group_map = {
     "PSYC": "Social Science",
     "SOCI": "Social Science",
 
-    # Creative Arts
-    "ARTH": "Creative Arts",
-    "ART": "Creative Arts",
-    "DGME": "Creative Arts",
-    "MUS.": "Creative Arts",
+    # Arts & Media
+    "ARTH": "Arts & Media",
+    "ART": "Arts & Media",
+    "DGME": "Arts & Media",
+    "MUS.": "Arts & Media",
 
-    # Health and Wellness
-    "ADS": "Health and Wellness"
+    # Health & Wellness
+    "ADS": "Health & Wellness"
 }
 
 # Color Map
 color_map = {
     "Social Science": "#1d4e89",  
-    "Creative Arts": "#7D6AC8",    
-    "Health and Wellness": "#f79256", 
+    "Arts & Media": "#7D6AC8",    
+    "Health & Wellness": "#f79256", 
     "Other": "#7f7f7f"             
 }
 
 # Group Icons
 group_icons = {
     "Social Science": "📘",
-    "Creative Arts": "🎨",
-    "Health and Wellness": "🧡",
+    "Arts & Media": "🎨",
+    "Health & Wellness": "🧡",
     "Other": "⚪"
 }
 
@@ -87,7 +87,7 @@ selected_day_letter = day_map[day_input]
 # ACC Filter
 group_input = st.selectbox(
     "Filter by ACC",
-    ["All", "Social Science", "Creative Arts", "Health and Wellness", "Other"]
+    ["All", "Social Science", "Arts & Media", "Health & Wellness", "Other"]
 )
 
 # Filtering
