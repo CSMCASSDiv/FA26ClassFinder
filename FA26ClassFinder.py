@@ -85,7 +85,7 @@ st.title("FA26 CASS Class Finder")
 
 # Day Select
 day_input = st.selectbox("Select Day", list(day_map.keys()))
-time_input = st.number_input("Enter Time (HHMM", value=900)
+time_input = st.number_input("Enter Time (HHMM)", value=900)
 
 selected_day_letter = day_map[day_input]
 
