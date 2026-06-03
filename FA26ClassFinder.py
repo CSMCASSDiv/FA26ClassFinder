@@ -27,8 +27,8 @@ group_map = {
     "DGME": "Arts & Media",
     "MUS.": "Arts & Media",
 
-     # Business & Public Service
-     "ECON": "Business & Public Service",
+    # Business & Public Service
+    "ECON": "Business & Public Service",
     
     # Health & Wellness
     "ADS": "Health & Wellness",
@@ -114,20 +114,6 @@ results = results.sort_values(by="Section Meet Begin Time")
 
 # Display results
 st.subheader("Classes Happening Now")
-
-# if results.empty:
-#    st.write("No classes found.")
-# else:
-#    for _, row in results.iterrows():
-#        st.markdown(f"""
-#        **{row['Course']} – {row['Title']}**  
-#        Instructor: {row['Instructor']}  
-#        Email: {row['Instructor Email']}  
-#        Building: {row['Building']}  
-#        Room: {row['Room']}  
-#        Time: {row['Section Meet Begin Time']}–{row['Section Meet End Time']}
-#        """)
-
 
 if results.empty:
     st.write("No classes found.")
