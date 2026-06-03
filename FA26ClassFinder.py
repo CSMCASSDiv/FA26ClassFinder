@@ -89,11 +89,14 @@ time_input = st.number_input("Enter Time (HHMM, no colon)", value=900)
 
 selected_day_letter = day_map[day_input]
 
-# ACC Filter
-group_input = st.selectbox(
+
+# ACC Filter (MULTI-SELECT)
+group_input = st.multiselect(
     "Filter by ACC",
-    ["All",  "Arts & Media", "Business & Public Service", "Health & Wellness", "Language Arts & Social Science", "Other"]
+    ["Arts & Media", "Business & Public Service", "Health & Wellness", "Language Arts & Social Science", "Other"]
 )
+
+st.caption("Select one or more categories. Leave blank to show all.")
 
 # Filtering
 results = df[
@@ -102,8 +105,8 @@ results = df[
     & (df["Section Meet End Time"] >= time_input)
 ]
 
-if group_input != "All":
-    results = results[results["Group"] == group_input]
+if len(group_input) > 0:
+    results = results[results["Group"].isin(group_input)]
 
 # Sort results by time
 results = results.sort_values(by="Section Meet Begin Time")
