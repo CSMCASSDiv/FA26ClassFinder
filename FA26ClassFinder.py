@@ -20,16 +20,6 @@ df["Days_List"] = df["Section Meet Schedule"].apply(expand_days)
 
 # Group Map
 group_map = {
-    # Social Science
-    "ANTH": "Social Science",
-    "ECON": "Social Science",
-    "ETHN": "Social Science",
-    "GBST": "Social Science",
-    "HIST": "Social Science",
-    "PHIL": "Social Science",
-    "POLS": "Social Science",
-    "PSYC": "Social Science",
-    "SOCI": "Social Science",
 
     # Arts & Media
     "ARTH": "Arts & Media",
@@ -37,23 +27,38 @@ group_map = {
     "DGME": "Arts & Media",
     "MUS.": "Arts & Media",
 
+     # Business & Public Service
+     "ECON": "Business & Public Service",
+    
     # Health & Wellness
-    "ADS": "Health & Wellness"
+    "ADS": "Health & Wellness",
+
+    # Language Arts & Social Science
+    "ANTH": "Language Arts & Social Science",
+    "ETHN": "Language Arts & Social Science",
+    "GBST": "Language Arts & Social Science",
+    "HIST": "Language Arts & Social Science",
+    "PHIL": "Language Arts & Social Science",
+    "POLS": "Language Arts & Social Science",
+    "PSYC": "Language Arts & Social Science",
+    "SOCI": "Language Arts & Social Science"
 }
 
 # Color Map
-color_map = {
-    "Social Science": "#1d4e89",  
+color_map = { 
     "Arts & Media": "#7D6AC8",    
+    "Business & Public Service": "#f7e356",
     "Health & Wellness": "#f79256", 
+    "Language Arts & Social Science": "#1d4e89", 
     "Other": "#7f7f7f"             
 }
 
 # Group Icons
 group_icons = {
-    "Social Science": "📘",
     "Arts & Media": "🎨",
+    "Business & Public Service": "📈",
     "Health & Wellness": "🧡",
+    "Language Arts & Social Science": "📘",
     "Other": "⚪"
 }
 
@@ -87,7 +92,7 @@ selected_day_letter = day_map[day_input]
 # ACC Filter
 group_input = st.selectbox(
     "Filter by ACC",
-    ["All", "Social Science", "Arts & Media", "Health & Wellness", "Other"]
+    ["All",  "Arts & Media", "Business & Public Service," "Health & Wellness", "Language Arts & Social Science", "Other"]
 )
 
 # Filtering
