@@ -85,10 +85,11 @@ st.title("FA26 CASS Class Finder")
 
 # Day Select
 day_input = st.selectbox("Select Day", list(day_map.keys()))
-time_input = st.number_input("Enter Time (HHMM, no colon)", value=900)
+time_input = st.number_input("Enter Time (HHMM", value=900)
 
 selected_day_letter = day_map[day_input]
 
+st.caption("Use 24-hour time input without a colon. For example, if you're looking for a 2:10 pm class, type 1410.")
 
 # ACC Filter (MULTI-SELECT)
 group_input = st.multiselect(
