@@ -92,7 +92,7 @@ selected_day_letter = day_map[day_input]
 # ACC Filter
 group_input = st.selectbox(
     "Filter by ACC",
-    ["All",  "Arts & Media", "Business & Public Service," "Health & Wellness", "Language Arts & Social Science", "Other"]
+    ["All",  "Arts & Media", "Business & Public Service", "Health & Wellness", "Language Arts & Social Science", "Other"]
 )
 
 # Filtering
